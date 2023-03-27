@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Vegetable : Food
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override string GetDisplayedText()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        return "I am a vegetable. Do not trust fruits, they're lying about themselves.";
     }
 }

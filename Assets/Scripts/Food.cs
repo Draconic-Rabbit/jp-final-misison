@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] string _specificName;
+    [SerializeField] string _colorName;
+    [SerializeField] TextMeshProUGUI _txtUI;
+
+    public string ColorName { get => _colorName; protected set => _colorName = value; }
+    public string SpecificName { get => _specificName; protected set => _specificName = value; }
+
+    public virtual void DisplayText()
     {
-        
+        _txtUI.text = GetDisplayedText();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        DisplayText();
+    }
+
+    protected virtual string GetDisplayedText()
+    {
+        return "I am some food. My name is " + _specificName + ". And i'm " + _colorName;
     }
 }
