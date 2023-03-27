@@ -9,9 +9,11 @@ public class Food : MonoBehaviour
     [SerializeField] string _colorName;
     [SerializeField] TextMeshProUGUI _txtUI;
 
+    // ENCAPSULATION
     public string ColorName { get => _colorName; protected set => _colorName = value; }
     public string SpecificName { get => _specificName; protected set => _specificName = value; }
 
+    // ABSTRACTION 
     public virtual void DisplayText()
     {
         _txtUI.text = GetDisplayedText();
