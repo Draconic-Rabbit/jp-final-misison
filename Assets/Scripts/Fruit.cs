@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // INHERITANCE
-public class Fruits : Food
+public class Fruit : Food
 {
     protected override string GetDisplayedText()
     {
-        return "I am a fruit. My name is " + SpecificName + ". And i'm better than vegetable.";
+        return "I am a fruit. My name is " + SpecificName + ". And i'm better than vegetable. And i'm " + ColorName + ".";
     }
 }
